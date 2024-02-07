@@ -10,7 +10,7 @@ const App = () => {
 
   const api = "https://dummyjson.com/products";
 
-  async function fetchAPI(){
+  function fetchAPI(){
     fetch(api)
     .then((response)=>response.json())
     .then((data)=>{
