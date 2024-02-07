@@ -1,6 +1,7 @@
 
 import React, { useState } from "react";
 import './../styles/App.css';
+import axios from "axios";
 // import axios from "axios";
 
 const App = () => {
@@ -9,7 +10,7 @@ const App = () => {
 
   const api = "https://dummyjson.com/products";
 
-  function fetchAPI(){
+  async function fetchAPI(){
     fetch(api)
     .then((response)=>response.json())
     .then((data)=>{
@@ -20,6 +21,8 @@ const App = () => {
     .catch((err)=>{
       console.log(err);
     });
+
+    
     
   }
 
@@ -30,6 +33,7 @@ const App = () => {
 
   return (
     <div>
+        <h1>Data Fetched from API</h1>
         <pre>{data}</pre>
     </div>
   )
